@@ -26,7 +26,7 @@ const Project = () => {
     return (
         <div tabIndex={0} onKeyDown={buttonDown} onKeyUp={buttonUp}>
             <h1>Delaunay/Voronoi Plotter</h1>
-            <p>Click to plot points on the canvas below. The program will automatically construct the Delaunay Triangulation
+            <p>Click to plot points on the canvases below. The program will automatically construct the Delaunay Triangulation
               and corresponding Voronoi diagram.
             </p>
             <div>
@@ -36,6 +36,12 @@ const Project = () => {
             <button type="button" onClick={handleClear}>
               Clear
             </button>
+            <ul id="info-box"><h4>How to use this tool:</h4>
+              <li>Click either canvas to plot points - these will show up in <b id="red">red</b>.</li>
+              <li>On the Voronoi diagram (right), vertices are marked with <b>black</b> points. These correspond to the circumcenters of the delaunay triangles.</li>
+              <li>Click and drag a point on the <i>left canvas only</i> to move it around and see how the diagrams change.</li>
+              <li>Use <b>ctrl+click</b> inside a triangle on the Delaunay triangulation to view its circumcircle on both diagrams. The circumcenter will also appear in <b id="blue">blue</b> in the triangulation. Remove the circumcircle by using ctrl+click on the triangle again or placing another point.</li>
+            </ul>
             <div className="Info-Section" >
               <TabBox />
             </div>

@@ -13,6 +13,27 @@ canvas {
   border: 2px solid gray;
 }
 
+.sources-ul {
+  list-style-type: none;
+}
+
+#red {
+  color: red;
+}
+
+#blue {
+  color: blue
+}
+
+#info-box {
+  list-style-type: georgian;
+  margin: 0 10vw;
+}
+
+#info-box li {
+  text-align: left;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
