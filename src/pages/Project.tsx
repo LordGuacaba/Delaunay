@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Canvas } from "../components/delaunay";
 import TabBox from "../components/TabBox"
+import { Button } from "@mui/material";
 
 const Project = () => {
     
@@ -33,9 +34,9 @@ const Project = () => {
               <Canvas props={[coords,setCoords]} mode={mode} right={false} circumselected={circumselected} ctrl={ctrl}></Canvas>
               <Canvas props={[coords,setCoords]} mode={mode2} right={true} circumselected={circumselected} ctrl={ctrl}></Canvas>
             </div>
-            <button type="button" onClick={handleClear}>
+            <Button variant="outlined" onClick={handleClear}>
               Clear
-            </button>
+            </Button>
             <ul id="info-box"><h4>How to use this tool:</h4>
               <li>Click either canvas to plot points - these will show up in <b id="red">red</b>.</li>
               <li>On the Voronoi diagram (right), vertices are marked with <b>black</b> points. These correspond to the circumcenters of the delaunay triangles.</li>
