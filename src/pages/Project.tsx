@@ -42,6 +42,7 @@ const Project = () => {
               <li>Click and drag a point on the <i>left canvas only</i> to move it around and see how the diagrams change.</li>
               <li>Use <b>ctrl+click</b> inside a triangle on the Delaunay triangulation to view its circumcircle on both diagrams. The circumcenter will also appear in <b id="blue">blue</b> in the triangulation. Remove the circumcircle by using ctrl+click on the triangle again or placing another point.</li>
             </ul>
+            <h1>About Delaunay Triangulations and Voronoi Diagrams</h1>
             <div className="Info-Section" >
               <TabBox />
             </div>
