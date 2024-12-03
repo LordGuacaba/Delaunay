@@ -3,7 +3,6 @@ import Delaunator from 'delaunator';
 
 
 
-
 function circumcenter(a: any[],b: any[],c: any[]) : number[]{
   const ad = a[0] * a[0] + a[1] * a[1];
   const bd = b[0] * b[0] + b[1] * b[1];
@@ -62,7 +61,7 @@ function trianglesAdjacentToTriangle(delaunay: { halfedges: { [x: string]: any; 
 }
 
 export function Canvas(props: {props:[any, any],mode:[any,any], right:boolean, circumselected:[any,any], ctrl:[any,any]}) {
-  
+
   const [coords,setCoords] = props.props
   const [modeType,setMode] = props.mode
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -73,11 +72,6 @@ export function Canvas(props: {props:[any, any],mode:[any,any], right:boolean, c
   var height = 0.6 * window.innerHeight
   var width = 0.45 * window.innerWidth
   
-
-  window.addEventListener("resize",()=>{
-    setCoords([])
-    setCircumSelected([])
-  })
 
   var lastYOffset = window.scrollY
   var lastXOffset = window.scrollX
