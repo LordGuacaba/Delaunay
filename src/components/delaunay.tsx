@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState } from 'react'
 import Delaunator from 'delaunator';
 
-
+var Reloadable = true
 
 function circumcenter(a: any[],b: any[],c: any[]) : number[]{
   const ad = a[0] * a[0] + a[1] * a[1];
@@ -61,6 +61,10 @@ function trianglesAdjacentToTriangle(delaunay: { halfedges: { [x: string]: any; 
 }
 
 export function Canvas(props: {props:[any, any],mode:[any,any], right:boolean, circumselected:[any,any], ctrl:[any,any]}) {
+  console.log("here")
+
+  
+  
 
   const [coords,setCoords] = props.props
   const [modeType,setMode] = props.mode
@@ -72,6 +76,19 @@ export function Canvas(props: {props:[any, any],mode:[any,any], right:boolean, c
   var height = 0.6 * window.innerHeight
   var width = 0.45 * window.innerWidth
   
+
+  window.addEventListener("resize",()=>{
+    if (!Reloadable){
+      return 
+    }
+    Reloadable = false
+  
+    setTimeout(() => {
+      Reloadable=true
+    }, 100);
+    setCoords([])
+    setCircumSelected([])
+  })
 
   var lastYOffset = window.scrollY
   var lastXOffset = window.scrollX

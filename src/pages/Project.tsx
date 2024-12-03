@@ -4,7 +4,6 @@ import TabBox from "../components/TabBox"
 import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Grid, Typography } from "@mui/material";
 
 const Project = () => {
-  console.log("reloading project")
   const [coords,setCoords] = useState<number[]>([])
   const circumselected = useState<boolean[]>([])
   const mode = useState<boolean>(true)
@@ -33,9 +32,9 @@ const Project = () => {
                 aria-controls="panel1-content"
                 id="panel1-header"
               >
-              <Typography sx={{ width: '45%', flexShrink: 0 }}>
+              <Typography sx={{ width: '42%', flexShrink: 0 }}>
               </Typography>
-              <Typography >How To Use This Tool:</Typography>
+              <Typography >Click For How To Use This Tool</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <ul id="info-box">
