@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Canvas } from "../components/delaunay";
 import TabBox from "../components/TabBox"
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Grid, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Button, Typography } from "@mui/material";
 
 const Project = () => {
   const [coords,setCoords] = useState<number[]>([])
@@ -50,11 +50,11 @@ const Project = () => {
               <Canvas props={[coords,setCoords]} mode={mode} right={false} circumselected={circumselected} ctrl={ctrl}></Canvas>
               <Canvas props={[coords,setCoords]} mode={mode2} right={true} circumselected={circumselected} ctrl={ctrl}></Canvas>
             </div>
-            <Button variant="outlined" onClick={handleClear}>
+            <Button variant="outlined" onClick={handleClear} sx={{marginBottom: "4vh"}}>
               Clear
             </Button>
             
-            <h1>About Delaunay Triangulations and Voronoi Diagrams</h1>
+            <h2>About Delaunay Triangulations and Voronoi Diagrams</h2>
             <div className="Info-Section" >
               <TabBox />
             </div>
