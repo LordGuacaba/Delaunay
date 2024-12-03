@@ -1,10 +1,38 @@
-body {
-  margin: 0 5vw;
-}
-
 .App {
   text-align: center;
-  margin: 0 5vw;
+  margin: 0 2vw;
+}
+
+.Info-Section {
+  text-align: justify;
+  justify-content: left;
+  margin-top: 5vh;
+}
+
+canvas {
+  border: 2px solid gray;
+}
+
+.sources-ul {
+  list-style-type: none;
+}
+
+#red {
+  color: red;
+}
+
+#blue {
+  color: blue
+}
+
+#info-box {
+  list-style-type: georgian;
+  margin: 0 10vw;
+  padding-bottom: 4vh;
+}
+
+#info-box li {
+  text-align: left;
 }
 
 .App-logo {

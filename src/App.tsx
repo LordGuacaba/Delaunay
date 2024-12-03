@@ -1,9 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { AppBar, CssBaseline, Link, Stack, Toolbar, Typography } from '@mui/material';
 import Router from './routes/Router';
 
 function App() {
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    
+    const handleResize = () => setWidth(window.innerWidth)
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+  
   const [page, setPage] = useState("project");
 
   const renderProject = () => setPage("project");
@@ -30,7 +39,9 @@ function App() {
         </Stack>
       </Toolbar>
     </AppBar>
-    <Router path={page}/>
+    <div className='App'>
+      <Router path={page}/>
+    </div>
     </>
   );
 }
